@@ -12,28 +12,28 @@
     <js-module src="socket.js" name="Socket">
         <clobbers target="window.Socket" />
     </js-module>
-    
+
     <!-- android -->
-    <platform name="android">
+    <platform name="android" xmlns:android="http://schemas.android.com/apk/res/android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="SocketsForCordova"> 
+            <feature name="SocketsForCordova">
                 <param name="android-package" value="cz.blocshop.socketsforcordova.SocketPlugin"/>
             </feature>
         </config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.INTERNET" />
-        </config-file>  
+        </config-file>
 		<source-file src="src/android/src/cz/blocshop/socketsforcordova/Logging.java" target-dir="src/cz/blocshop/socketsforcordova" />
         <source-file src="src/android/src/cz/blocshop/socketsforcordova/Consumer.java" target-dir="src/cz/blocshop/socketsforcordova" />
 		<source-file src="src/android/src/cz/blocshop/socketsforcordova/SocketAdapter.java" target-dir="src/cz/blocshop/socketsforcordova" />
 		<source-file src="src/android/src/cz/blocshop/socketsforcordova/SocketAdapterImpl.java" target-dir="src/cz/blocshop/socketsforcordova" />
 		<source-file src="src/android/src/cz/blocshop/socketsforcordova/SocketAdapterOptions.java" target-dir="src/cz/blocshop/socketsforcordova" />
 		<source-file src="src/android/src/cz/blocshop/socketsforcordova/SocketPlugin.java" target-dir="src/cz/blocshop/socketsforcordova" />
-		
+
     </platform>
-    
+
     <!-- ios -->
-    <platform name="ios">    
+    <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="SocketsForCordova">
                 <param name="ios-package" value="SocketPlugin" />
@@ -66,6 +66,6 @@
 		<source-file src="src/wp8/src/SocketStorage.cs" target-dir="src" />
     </platform>
 
-        
+
 
 </plugin>
